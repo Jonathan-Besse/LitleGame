@@ -64,7 +64,7 @@ class Arrow():
     def tp(self):
         self.image = self.tp_img[self.step_index // 10]
         self.arrow_rect = self.image.get_rect()
-        self.arrow_rect.x = self.X_POS
+        self.arrow_rect.x = self.X_POS + 200
         self.arrow_rect.y = self.Y_POS
 
     def draw(self, SCREEN):
