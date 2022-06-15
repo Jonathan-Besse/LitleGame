@@ -105,7 +105,7 @@ def main():
     run = True
     clock = pygame.time.Clock()
     player = Arrow()
-    game_speed = 14
+    game_speed = 15
     x_pos_bg = 0
     y_pos_bg = 380
     points = 0
@@ -180,10 +180,10 @@ def menu(death_count):
         font = pygame.font.Font('freesansbold.ttf', 30)
 
         if death_count == 0:
-            text = font.render("Appuie connard, j'ai pas que ça à foutre", True, (0, 0, 0))
+            text = font.render("Appuyez pour essayer", True, (0, 0, 0))
         elif death_count > 0:
-            text = font.render("Appuie PUTAIN", True, (0, 0, 0))
-            score = font.render("VOILA TON PUTAIN DE SCORE DE MERDE !!!!", True, (0, 0, 0))
+            text = font.render("Appuyez", True, (0, 0, 0))
+            score = font.render("Votre score : " + str(points), True, (0, 0, 0))
             scoreRect = score.get_rect()
             scoreRect.center = (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50)
             SCREEN.blit(score, scoreRect)
